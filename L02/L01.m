@@ -1,3 +1,5 @@
+clearvars;
+
 function res = model(t, stan, a, b, c, d)
     x = stan(1);
     y = stan(2);
@@ -10,11 +12,11 @@ end
 
 % Parametry
 a = 0.5; % tempo wzrostu populacji ofiar
-b = 1; % tempo zjadania ofiar przez drapieżniki
+b = 3; % tempo zjadania ofiar przez drapieżniki
 c = 1; % tempo umierania drapieżników
 d = 0.5; % tempo wzrostu populacji drapieżników
 
-Wp = [4; 2]; % Startowa populacja [ofiary; drapieżniki]
+Wp = [2; 1]; % Startowa populacja [ofiary; drapieżniki]
 czas_sym = [0 100]; % Przedział czasowy
 
 [t, sol] = ode45(@(t, stan) model(t, stan, a, b, c, d), czas_sym, Wp);
