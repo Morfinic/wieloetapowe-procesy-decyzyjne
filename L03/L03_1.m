@@ -12,8 +12,14 @@ function res = model(t, stan, delta, r, b)
     res = [dxdt; dydt; dzdt];
 end
 
-Wp = [0; 0.5; 1];
-czas_sym = [0 100];
+%% Zad 1
+
+Wp = [
+    0; 
+    0.5; 
+    1
+];
+czas_sym = [0 1000];
 
 delta = 10;
 r = 28;
@@ -32,3 +38,25 @@ xlabel('x');
 ylabel('y');
 zlabel('z');
 grid on;
+hold on;
+
+%% Zad 2
+
+Wp = [
+    0; 
+    -0.5; 
+    1
+];
+
+%[t, sol] = ode45(@(t, stan) model(t, stan, delta, r, b), czas_sym, Wp);
+
+%x = sol(:,1);
+%y = sol(:,2);
+%z = sol(:,3);
+
+%plot3(x, y, z, 'LineWidth', 1.5)
+
+%xlabel('x');
+%ylabel('y');
+%zlabel('z');
+%hold on;
