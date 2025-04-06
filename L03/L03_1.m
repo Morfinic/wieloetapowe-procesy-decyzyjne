@@ -13,7 +13,7 @@ function res = model(t, stan, delta, r, b)
 end
 
 Wp = [0; 0.5; 1];
-czas_sym = [0 100];
+czas_sym = [100 500];
 
 delta = 10;
 r = 28;
