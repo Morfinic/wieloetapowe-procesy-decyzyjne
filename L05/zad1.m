@@ -1,6 +1,7 @@
 clearvars;
 clc;
 
+%%
 sigma = 10;
 b = 8/3;
 
@@ -18,6 +19,7 @@ disp('x = '); disp(sol.x);
 disp('y = '); disp(sol.y);
 disp('z = '); disp(sol.z);
 
+%%
 J = [
     -sigma, sigma, 0;
     r - z, -1, -x;
