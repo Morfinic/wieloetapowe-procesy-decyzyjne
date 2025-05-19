@@ -1,7 +1,5 @@
 #include "fibonacci.h"
 
-#include <iostream>
-
 unsigned __int128 Fibonacci(const int n) {
     if (n == 0 or n == 1)
         return n;
