@@ -21,23 +21,23 @@ void print_int128(const int n, unsigned __int128 res) {
 int main() {
     int fib_nums[5] = {1, 2, 5, 35, 100};
     // Zad.1
-    printf("Rekurencja:\n");
-     for (const int n: fib_nums) {
-         if (n == 100)
-             continue;
-         const unsigned __int128 res = Fibonacci(n);
-         print_int128(n, res);
-     }
+//    printf("Rekurencja:\n");
+//     for (const int n: fib_nums) {
+//         if (n == 100)
+//             continue;
+//         const unsigned __int128 res = Fibonacci(n);
+//         print_int128(n, res);
+//     }
 
     // Zad.2
-    printf("Memo:\n");
-    for (const int n: fib_nums) {
-         unsigned __int128 memo[n+1];
-         std::fill(memo, memo+n+1, -1LL);
-
-         const unsigned __int128 res = Fibonacci_Memo(n, memo);
-         print_int128(n, res);
-     }
+//    printf("Memo:\n");
+//    for (const int n: fib_nums) {
+//         unsigned __int128 memo[n+1];
+//         std::fill(memo, memo+n+1, -1LL);
+//
+//         const unsigned __int128 res = Fibonacci_Memo(n, memo);
+//         print_int128(n, res);
+//     }
 
     // Zad.3
     printf("Bottom-Up:\n");
